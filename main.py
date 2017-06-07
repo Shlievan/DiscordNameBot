@@ -5,7 +5,7 @@ import sched, time
 import threading
 import os
 
-#new version
+#Version 1.0
 
 client = discord.Client()
 random.seed()
