@@ -69,11 +69,6 @@ def getName():
 	return member.display_name
 
 async def updateClient():
-	pid=os.fork()
-	if pid==0:
-		print('starting update script...')
-		os.system('nohup python3.6 ./update.sh &')
-	print('exiting bot...')
 	await exit('update')
 
 async def exit(message):
