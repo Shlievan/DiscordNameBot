@@ -70,7 +70,7 @@ async def updateClient():
 	pid=os.fork()
 	if pid==0:
 		print('starting update script...')
-		os.system('nohup python3.6 ./update.sh & disown')
+		os.system('nohup python3.6 ./update.sh &')
 	print('exiting bot...')
 	await exit()
 
