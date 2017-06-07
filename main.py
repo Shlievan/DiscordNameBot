@@ -5,9 +5,9 @@ import sched, time
 import threading
 import os
 
-author 	= 'Jay Cole'
-version = '1.1'
-date 	= '6/7/2017'
+author 	= 'author=Jay Cole'
+version = 'version=1.1'
+date 	= 'date=6/7/2017'
 
 client = discord.Client()
 random.seed()
@@ -187,7 +187,7 @@ async def on_ready():
 	print('Logged in as')
 	print(client.user.name)
 	print(client.user.id)
-	print(author, ' ', date, ' ', version)
+	print(author, '   ', date, '   ', version)
 	print('----------')
 
 
