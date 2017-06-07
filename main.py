@@ -6,7 +6,7 @@ import threading
 import os
 
 author 	= 'author=Jay Cole'
-version = 'version=1.11'
+version = 'version=1.1.2'
 date 	= 'date=6/7/2017'
 
 client = discord.Client()
