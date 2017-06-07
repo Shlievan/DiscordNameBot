@@ -6,7 +6,7 @@ import threading
 import os
 
 author 	= 'author=Jay Cole'
-version = 'version=1.1'
+version = 'version=1.11'
 date 	= 'date=6/7/2017'
 
 client = discord.Client()
@@ -141,7 +141,7 @@ async def on_message(message):
 		await client.send_message(message.channel, 'I can\'t do that, ' + message.author.mention)
 
 	elif message.content.startswith(identifier + 'q'):
-		await exit()
+		await exit('quit')
 
 
 async def changeName(member):
