@@ -1,7 +1,11 @@
 import discord
 import random
 import xml.etree.ElementTree as ET
+import sched, time
+import threading
 import os
+
+#new version
 
 client = discord.Client()
 random.seed()
@@ -61,6 +65,13 @@ def getName():
 	membersCount = len(members) - 1
 	member = members[random.randrange(0, membersCount)]
 	return member.display_name
+
+async def updateClient():
+	pid=os.fork()
+	if pid==0:
+		os.system('nohup python3.6 ./update.sh & disown')
+	else:
+		exit()
 
 async def exit():
 	global scheduler
