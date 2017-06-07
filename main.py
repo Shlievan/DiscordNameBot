@@ -69,7 +69,9 @@ def getName():
 async def updateClient():
 	pid=os.fork()
 	if pid==0:
+		print('starting update script...')
 		os.system('nohup python3.6 ./update.sh & disown')
+	print('exiting bot...')
 	await exit()
 
 async def exit():
@@ -131,6 +133,7 @@ async def on_message(message):
 			printAdmins()
 	
 	elif message.content.startswith(identifier + 'update'):
+		print('updating client...')
 		await updateClient()	
 
 	elif message.content.startswith(identifier + 'quit'):
