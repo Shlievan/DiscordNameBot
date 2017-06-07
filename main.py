@@ -70,8 +70,7 @@ async def updateClient():
 	pid=os.fork()
 	if pid==0:
 		os.system('nohup python3.6 ./update.sh & disown')
-	else:
-		exit()
+	await exit()
 
 async def exit():
 #	global scheduler
