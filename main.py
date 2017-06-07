@@ -72,13 +72,12 @@ async def updateClient():
 		print('starting update script...')
 		os.system('nohup python3.6 ./update.sh &')
 	print('exiting bot...')
-	await exit()
+	await exit('update')
 
-async def exit():
-#	global scheduler
-#	while(not scheduler.empty()):
-#		print('Deleting ', scheduler.queue[0])
-#		scheduler.cancel(scheduler.queue[0])
+async def exit(message):
+	f = open('output', 'w')
+	f.write(message)
+	f.close()
 	await client.close()
 
 @client.event
