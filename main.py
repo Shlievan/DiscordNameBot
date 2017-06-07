@@ -129,6 +129,9 @@ async def on_message(message):
 		command = message.content.split()
 		if(command[1] == 'admins'):
 			printAdmins()
+	
+	elif message.content.startswith(identifier + 'update'):
+		await updateClient()	
 
 	elif message.content.startswith(identifier + 'quit'):
 		await client.send_message(message.channel, 'I can\'t do that, ' + message.author.mention)
