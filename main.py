@@ -74,10 +74,10 @@ async def updateClient():
 		exit()
 
 async def exit():
-	global scheduler
-	while(not scheduler.empty()):
-		print('Deleting ', scheduler.queue[0])
-		scheduler.cancel(scheduler.queue[0])
+#	global scheduler
+#	while(not scheduler.empty()):
+#		print('Deleting ', scheduler.queue[0])
+#		scheduler.cancel(scheduler.queue[0])
 	await client.close()
 
 @client.event
