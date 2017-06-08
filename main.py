@@ -13,7 +13,8 @@ client = discord.Client()
 random.seed()
 scheduler = sched.scheduler(time.time, time.sleep)
 
-serverID = '238871670561964033'
+serverID = '238871670561964033' #Luke's server
+# Luke's server, room 1 = 238872316094709761
 
 # ID's of all users with admin privileges over bot (read from settings.xml)
 botAdmins = []
