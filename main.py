@@ -13,7 +13,7 @@ client = discord.Client()
 random.seed()
 scheduler = sched.scheduler(time.time, time.sleep)
 
-serverID = '232312359585185793'
+serverID = '238871670561964033'
 
 # ID's of all users with admin privileges over bot (read from settings.xml)
 botAdmins = []
@@ -139,10 +139,8 @@ async def on_message(message):
 		await exit('quit')
 
 
-async def changeName(member):
-	await asyncio.sleep(10)
-	#time.sleep(10)
-	#member = client.get_server(serverID).get_member(memberID)
+async def changeName(member):	
+	await asyncio.sleep((random.randrange(1,5) * 6))
 	await client.change_nickname(member, getName())
 
 @client.event
